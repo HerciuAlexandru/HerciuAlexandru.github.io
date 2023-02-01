@@ -435,24 +435,26 @@ font-size: var(--fs-h3);
     font-family: var(--ff-primary)
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
     .btn {
         font-size: 1rem;
     }
 
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 30   0px;
+        grid-template-columns: 1fr 30  0px;
         grid-template-areas: 
             "title img"
             "subtitle img"
             "text img";
         grid-column-gap: 2em;
+     
     }
 
     
     .section__title--about {
         grid-area: title;
+        font-size:3em;
     }
     
     .section__subtitle--about {
@@ -461,20 +463,21 @@ font-size: var(--fs-h3);
         position: relative;
         left: -1em;
         width: calc(100% + 2em);
+        
         padding-left: 1em;
-        padding-right: calc(200px + 4em);
-       
-      
+        padding-right: calc(170px + 3em);
+        
     }
     .about-me__img {
         grid-area: img;
         position: relative;
         z-index: 2;
+        width:240px
         
     }
 }
 
-@media(max-width:600px) {
+@media(max-width:749px) {
   
    .about-me img{
         display: none;
@@ -482,6 +485,8 @@ font-size: var(--fs-h3);
     }
 
     .section__title--about {
+        font-size: 3em;
+        margin-bottom: .5em;
        text-align: center;
     }
 
@@ -490,9 +495,10 @@ font-size: var(--fs-h3);
       display: inline;
     }
      .section__subtitle--about {
-        text-align: center
+        text-align: center;
+
     }
-    
+  
  }
 
  @media(max-width:500px) {
@@ -504,88 +510,6 @@ font-size: var(--fs-h3);
  }
 
 /* My Work */
-
-.my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-accent);
-    text-align: center;    
-}
-/* footer */
-
-.footer {
-    background: #111;
-    color: var(--clr-accent);
-    text-align: center;
-    padding: 2.5em 0;
-    font-size: var(--fs-h3);
-
-}
-
-.footer a { 
-    color: inherit;
-    text-decoration: none;
-}
-
-.footer__link {
-    font-weight: var(--fw-bold);
-}
-
-.footer__link:hover,
-.social-list__link:hover {
-    opacity: .7;
-}
-
-
-.social-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 2em 0 0;
-    padding: 0;
-    font-size: 1.5em;
-}
-
-.social-list__item {
-    margin: 0 .5em;
-}
-
-.social-list__link {
-    padding: .5em;
-}
-
-/* Individual portfolio item styles */
-
-.portfolio-item-individual {
-    padding: 0 2em 2em;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.portfolio-item-individual p {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@keyframes fadeIn {
-    100%{
-        opacity: 1;
-    };
-}
-
-@media (min-width:1200px){
-    .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        background-color: #303030;
-        border: 1px solid black;
- 
-    }
-}
-
-/*      Load more        */
-
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-accent);    
@@ -593,8 +517,6 @@ font-size: var(--fs-h3);
     margin-bottom: 0;
 }
 
-
-/* footer */
 .container{
     font-family: var(--ff-primary);
     max-width: 1200px;
@@ -678,8 +600,7 @@ font-size: var(--fs-h3);
     color:#fff;
   }
   
-  
-  
+
   #load-more{
     margin-top: 2em;
     display: inline-block;
@@ -731,3 +652,77 @@ font-size: var(--fs-h3);
     }
   
   }
+/* footer */
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes fadeIn {
+    100%{
+        opacity: 1;
+    };
+}
+
+@media (min-width:1200px){
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: #303030;
+        border: 1px solid black;
+ 
+    }
+}
+
